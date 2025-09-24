@@ -35,9 +35,9 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border transition-all duration-300 hover:bg-background/90">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="text-xl font-bold text-primary">
+        <div className="text-xl font-bold text-primary hover:text-accent transition-colors duration-300 cursor-pointer">
           Muhammad Noman
         </div>
 
@@ -47,9 +47,10 @@ const Header = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="relative text-muted-foreground hover:text-primary transition-colors duration-300 group py-2"
             >
               {item.label}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
             </button>
           ))}
         </div>
@@ -59,9 +60,9 @@ const Header = () => {
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
-            className="rounded-full"
+            className="rounded-full hover:scale-110 transition-transform duration-300 hover:bg-primary/10"
           >
-            {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            {isDark ? <Sun className="h-5 w-5 rotate-0 transition-transform duration-500 hover:rotate-180" /> : <Moon className="h-5 w-5 rotate-0 transition-transform duration-500 hover:-rotate-12" />}
           </Button>
 
           {/* Mobile Menu Button */}

@@ -73,26 +73,29 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-surface">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-surface relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tl from-primary/5 to-transparent rounded-full translate-x-36 translate-y-36"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in-up">
               Get In Touch
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.3s'}}>
               Let's discuss your next Android project or collaboration opportunity
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-8 animate-slide-in-left" style={{animationDelay: '0.6s'}}>
               <div>
-                <h3 className="text-2xl font-semibold text-foreground mb-6">
+                <h3 className="text-2xl font-semibold text-foreground mb-6 hover:text-primary transition-colors duration-300">
                   Let's Connect
                 </h3>
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-lg text-muted-foreground mb-8 leading-relaxed hover:text-foreground transition-colors duration-300">
                   I'm always open to discussing new opportunities, interesting projects, 
                   or just having a conversation about Android development. Feel free to reach out!
                 </p>
@@ -100,7 +103,7 @@ const Contact = () => {
 
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="border-primary/10 hover:border-primary/30 transition-colors">
+                  <Card key={index} className="border-primary/10 hover:border-primary/30 hover:shadow-lg hover:scale-105 transition-all duration-300 group/card animate-fade-in-up" style={{animationDelay: `${0.9 + index * 0.1}s`}}>
                     <CardContent className="p-4">
                       <a 
                         href={info.link}
@@ -108,12 +111,12 @@ const Contact = () => {
                         target={info.link.startsWith('http') ? '_blank' : '_self'}
                         rel={info.link.startsWith('http') ? 'noopener noreferrer' : ''}
                       >
-                        <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
-                          <info.icon className="w-5 h-5 text-primary" />
+                        <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary group-hover:scale-110 group/card-hover:shadow-md transition-all duration-300">
+                          <info.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                         </div>
                         <div>
-                          <p className="font-medium text-foreground">{info.label}</p>
-                          <p className="text-muted-foreground group-hover:text-primary transition-colors">
+                          <p className="font-medium text-foreground group-hover:text-primary transition-colors duration-300">{info.label}</p>
+                          <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                             {info.value}
                           </p>
                         </div>
@@ -125,15 +128,15 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <Card className="border-primary/20">
+            <Card className="border-primary/20 hover:shadow-lg hover:border-primary/30 transition-all duration-300 animate-slide-in-right" style={{animationDelay: '1.2s'}}>
               <CardHeader>
-                <CardTitle className="text-2xl text-foreground">Send a Message</CardTitle>
+                <CardTitle className="text-2xl text-foreground hover:text-primary transition-colors duration-300">Send a Message</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name" className="text-foreground">Name</Label>
+                    <div className="space-y-2 group">
+                      <Label htmlFor="name" className="text-foreground group-focus-within:text-primary transition-colors duration-300">Name</Label>
                       <Input
                         id="name"
                         name="name"
@@ -141,11 +144,11 @@ const Contact = () => {
                         onChange={handleInputChange}
                         placeholder="Your name"
                         required
-                        className="border-primary/20 focus:border-primary"
+                        className="border-primary/20 focus:border-primary hover:border-primary/50 focus:scale-105 transition-all duration-300"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email" className="text-foreground">Email</Label>
+                    <div className="space-y-2 group">
+                      <Label htmlFor="email" className="text-foreground group-focus-within:text-primary transition-colors duration-300">Email</Label>
                       <Input
                         id="email"
                         name="email"
@@ -154,13 +157,13 @@ const Contact = () => {
                         onChange={handleInputChange}
                         placeholder="your.email@example.com"
                         required
-                        className="border-primary/20 focus:border-primary"
+                        className="border-primary/20 focus:border-primary hover:border-primary/50 focus:scale-105 transition-all duration-300"
                       />
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="subject" className="text-foreground">Subject</Label>
+                  <div className="space-y-2 group">
+                    <Label htmlFor="subject" className="text-foreground group-focus-within:text-primary transition-colors duration-300">Subject</Label>
                     <Input
                       id="subject"
                       name="subject"
@@ -168,12 +171,12 @@ const Contact = () => {
                       onChange={handleInputChange}
                       placeholder="Project discussion, collaboration, etc."
                       required
-                      className="border-primary/20 focus:border-primary"
+                      className="border-primary/20 focus:border-primary hover:border-primary/50 focus:scale-105 transition-all duration-300"
                     />
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="message" className="text-foreground">Message</Label>
+                  <div className="space-y-2 group">
+                    <Label htmlFor="message" className="text-foreground group-focus-within:text-primary transition-colors duration-300">Message</Label>
                     <Textarea
                       id="message"
                       name="message"
@@ -182,26 +185,29 @@ const Contact = () => {
                       placeholder="Tell me about your project or how we can work together..."
                       rows={6}
                       required
-                      className="border-primary/20 focus:border-primary resize-none"
+                      className="border-primary/20 focus:border-primary hover:border-primary/50 focus:scale-105 transition-all duration-300 resize-none"
                     />
                   </div>
 
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-primary to-accent text-primary-foreground hover:scale-[1.02] transition-transform disabled:opacity-50"
+                    className="w-full bg-gradient-to-r from-primary to-accent text-primary-foreground hover:scale-[1.02] hover:shadow-lg transition-all duration-300 disabled:opacity-50 group relative overflow-hidden"
                   >
-                    {isSubmitting ? (
-                      <div className="flex items-center gap-2">
-                        <div className="animate-spin w-4 h-4 border-2 border-white/30 border-t-white rounded-full"></div>
-                        Sending...
-                      </div>
-                    ) : (
-                      <div className="flex items-center gap-2">
-                        <Send className="w-4 h-4" />
-                        Send Message
-                      </div>
-                    )}
+                    <span className="relative z-10">
+                      {isSubmitting ? (
+                        <div className="flex items-center gap-2">
+                          <div className="animate-spin w-4 h-4 border-2 border-white/30 border-t-white rounded-full"></div>
+                          Sending...
+                        </div>
+                      ) : (
+                        <div className="flex items-center gap-2">
+                          <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                          Send Message
+                        </div>
+                      )}
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </Button>
                 </form>
               </CardContent>

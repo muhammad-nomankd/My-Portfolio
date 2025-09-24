@@ -3,87 +3,92 @@ import { GraduationCap, Heart, Code } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-surface">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-20 bg-surface relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-primary/5 to-transparent rounded-full -translate-y-32 translate-x-32"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in-up">
               About Me
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.3s'}}>
               Passionate Android developer crafting exceptional mobile experiences
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-6 animate-slide-in-left" style={{animationDelay: '0.6s'}}>
               <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground">
+                <h3 className="text-2xl font-semibold text-foreground hover:text-primary transition-colors duration-300">
                   Hello! I'm Muhammad Noman Khan Durrani
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300">
                   I'm a dedicated Android developer with a passion for creating innovative, 
                   user-friendly mobile applications. My journey in software development has 
                   been driven by curiosity and a constant desire to learn and implement 
                   cutting-edge technologies.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  I specialize in modern Android development using Kotlin and Jetpack Compose, 
+                <p className="text-lg text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300">
+                  I specialize in modern Android development using <span className="text-accent font-semibold hover:text-primary transition-colors duration-300 cursor-default">Kotlin</span> and <span className="text-accent font-semibold hover:text-primary transition-colors duration-300 cursor-default">Jetpack Compose</span>, 
                   following clean architecture principles to build scalable and maintainable applications.
                 </p>
               </div>
 
               <div className="grid gap-4">
-                <Card className="border-primary/20">
+                <Card className="border-primary/20 hover:border-primary/40 hover:shadow-lg hover:scale-105 transition-all duration-300 group">
                   <CardContent className="p-6 flex items-center space-x-4">
-                    <div className="bg-primary/10 p-3 rounded-lg">
-                      <GraduationCap className="w-6 h-6 text-primary" />
+                    <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <GraduationCap className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Education</h4>
-                      <p className="text-muted-foreground">BS Information Technology</p>
+                      <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300">Education</h4>
+                      <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">BS Information Technology</p>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="border-accent/20">
+                <Card className="border-accent/20 hover:border-accent/40 hover:shadow-lg hover:scale-105 transition-all duration-300 group">
                   <CardContent className="p-6 flex items-center space-x-4">
-                    <div className="bg-accent/10 p-3 rounded-lg">
-                      <Code className="w-6 h-6 text-accent" />
+                    <div className="bg-accent/10 p-3 rounded-lg group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                      <Code className="w-6 h-6 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Specialization</h4>
-                      <p className="text-muted-foreground">Android Development with Kotlin</p>
+                      <h4 className="font-semibold text-foreground group-hover:text-accent transition-colors duration-300">Specialization</h4>
+                      <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">Android Development with Kotlin</p>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="border-primary/20">
+                <Card className="border-primary/20 hover:border-primary/40 hover:shadow-lg hover:scale-105 transition-all duration-300 group">
                   <CardContent className="p-6 flex items-center space-x-4">
-                    <div className="bg-primary/10 p-3 rounded-lg">
-                      <Heart className="w-6 h-6 text-primary" />
+                    <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <Heart className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Passion</h4>
-                      <p className="text-muted-foreground">Building scalable mobile solutions</p>
+                      <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300">Passion</h4>
+                      <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">Building scalable mobile solutions</p>
                     </div>
                   </CardContent>
                 </Card>
               </div>
             </div>
 
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="w-80 h-80 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center">
-                  <div className="w-64 h-64 bg-card rounded-full shadow-xl flex items-center justify-center">
-                    <div className="text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <div className="flex justify-center animate-slide-in-right" style={{animationDelay: '0.9s'}}>
+              <div className="relative group">
+                <div className="w-80 h-80 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-500 cursor-pointer">
+                  <div className="w-64 h-64 bg-card rounded-full shadow-xl flex items-center justify-center group-hover:shadow-2xl transition-shadow duration-300">
+                    <div className="text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
                       MN
                     </div>
                   </div>
                 </div>
-                <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-medium">
+                <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-medium animate-pulse">
                   Android Developer
                 </div>
+                <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary/20 rounded-full animate-float"></div>
+                <div className="absolute top-8 -right-8 w-4 h-4 bg-accent/30 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
               </div>
             </div>
           </div>

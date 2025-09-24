@@ -56,14 +56,17 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-surface">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-20 bg-surface relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-20 right-0 w-80 h-80 bg-gradient-to-bl from-accent/5 to-transparent rounded-full translate-x-40"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in-up">
               Featured Projects
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.3s'}}>
               Android applications showcasing modern development practices and user-centric design
             </p>
           </div>
@@ -72,27 +75,28 @@ const Projects = () => {
             {projects.map((project, index) => (
               <Card 
                 key={index}
-                className="group hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] border-0 overflow-hidden"
+                className="group hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] border-0 overflow-hidden cursor-pointer animate-fade-in-up"
+                style={{animationDelay: `${0.6 + index * 0.2}s`}}
               >
-                <div className={`h-2 bg-gradient-to-r ${project.gradient}`}></div>
+                <div className={`h-2 bg-gradient-to-r ${project.gradient} group-hover:h-3 transition-all duration-300`}></div>
                 
                 <CardHeader className="pb-4">
-                  <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                  <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-all duration-300 group-hover:scale-105">
                     {project.title}
                   </CardTitle>
                 </CardHeader>
 
                 <CardContent className="space-y-6">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
                     {project.description}
                   </p>
 
                   <div className="space-y-3">
-                    <h4 className="font-medium text-foreground">Key Features:</h4>
+                    <h4 className="font-medium text-foreground group-hover:text-primary transition-colors duration-300">Key Features:</h4>
                     <ul className="grid grid-cols-2 gap-2">
                       {project.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="text-sm text-muted-foreground flex items-center">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></div>
+                        <li key={featureIndex} className="text-sm text-muted-foreground flex items-center group-hover:text-foreground transition-colors duration-300">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 group-hover:bg-accent group-hover:scale-125 transition-all duration-300"></div>
                           {feature}
                         </li>
                       ))}
@@ -104,7 +108,10 @@ const Projects = () => {
                       <Badge 
                         key={tagIndex}
                         variant="secondary"
-                        className="bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+                        className="bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer"
+                        style={{
+                          animationDelay: `${0.8 + index * 0.2 + tagIndex * 0.1}s`
+                        }}
                       >
                         {tag}
                       </Badge>
@@ -114,16 +121,19 @@ const Projects = () => {
                   <div className="flex gap-3 pt-4">
                     <Button 
                       variant="default"
-                      className="flex-1 bg-gradient-to-r from-primary to-accent text-primary-foreground hover:scale-105 transition-transform"
+                      className="flex-1 bg-gradient-to-r from-primary to-accent text-primary-foreground hover:scale-105 hover:shadow-lg transition-all duration-300 group/btn relative overflow-hidden"
                     >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      View Project
+                      <span className="relative z-10 flex items-center">
+                        <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:rotate-45 transition-transform duration-300" />
+                        View Project
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
                     </Button>
                     <Button 
                       variant="outline"
-                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 group/btn"
                     >
-                      <Github className="w-4 h-4" />
+                      <Github className="w-4 h-4 group-hover/btn:scale-125 transition-transform duration-300" />
                     </Button>
                   </div>
                 </CardContent>
@@ -131,13 +141,13 @@ const Projects = () => {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
+          <div className="mt-16 text-center animate-scale-in" style={{animationDelay: '1.6s'}}>
             <Button 
               variant="outline"
               size="lg"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:shadow-lg px-8 py-3 transition-all duration-300 group"
             >
-              <Github className="w-5 h-5 mr-2" />
+              <Github className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
               View All Projects on GitHub
             </Button>
           </div>
