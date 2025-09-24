@@ -7,50 +7,62 @@ const Projects = () => {
   const projects = [
     {
       title: "TaskAlert App",
-      description: "A comprehensive task scheduling application with Firebase integration and weather-based alerts. Features include smart notifications, task prioritization, and weather condition monitoring for outdoor tasks.",
-      tags: ["Kotlin", "Jetpack Compose", "Firebase", "Weather API", "Room Database"],
+      description: "Task scheduling app built with Kotlin and Jetpack Compose. Integrated Firebase authentication, Google sign-in, and weather API for condition-based alerts. Users can add, update, and delete tasks with real-time sync.",
+      tags: ["Kotlin", "Jetpack Compose", "Firebase", "Google Sign-In", "Weather API"],
       gradient: "from-blue-400 to-purple-600",
       features: [
-        "Real-time weather integration",
-        "Smart task scheduling", 
-        "Push notifications",
-        "Offline support"
+        "Email & Google authentication",
+        "Save, update, delete tasks",
+        "Weather-based smart alerts",
+        "Modularized architecture"
       ]
     },
     {
-      title: "SalahSync App", 
-      description: "Modern masjid management system with prayer time calculations, community notifications, and administrative tools. Built with Material You design principles.",
-      tags: ["Kotlin", "MVVM", "Firebase", "Prayer Times API", "Material You"],
+      title: "SalahSync App",
+      description: "Masjid management app with Firestore backend. Allows admin to manage announcements, prayer times, and members. Integrated authentication state management with StateFlow.",
+      tags: ["Kotlin", "Firestore", "StateFlow", "FirebaseAuth", "Jetpack Compose"],
       gradient: "from-green-400 to-emerald-600",
       features: [
-        "Accurate prayer times",
-        "Community announcements",
-        "Event management",
-        "Qibla direction"
+        "Realtime announcements",
+        "Prayer time management",
+        "Member handling",
+        "Firestore authentication"
       ]
     },
     {
       title: "MarkMe App",
-      description: "Dual-interface attendance tracking system with separate admin and user portals. Features QR code scanning, geofencing, and comprehensive reporting.",
-      tags: ["Kotlin", "Clean Architecture", "Room", "QR Scanner", "Geofencing"],
-      gradient: "from-orange-400 to-red-600", 
+      description: "Attendance tracking system with separate UI for admin and users. Supports QR scanning, manual entry, and geofencing for location-based attendance.",
+      tags: ["Kotlin", "Room", "Clean Architecture", "QR Scanner", "Geofencing"],
+      gradient: "from-orange-400 to-red-600",
       features: [
+        "Admin & User UI separation",
         "QR code attendance",
-        "Admin dashboard",
-        "Attendance reports",
-        "Location verification"
+        "Location-based verification",
+        "Attendance reports"
       ]
     },
     {
       title: "Location Geofencing App",
-      description: "Advanced time tracking application using geofences to monitor time spent in specific locations. Includes detailed analytics and reporting features.",
-      tags: ["Kotlin", "Geofencing", "Room Database", "Coroutines", "Analytics"],
+      description: "App to monitor entry/exit of geofences, log time spent, and maintain visit history. Uses Room database and Coroutines for async operations.",
+      tags: ["Kotlin", "Geofencing", "Room Database", "Coroutines", "Jetpack Compose"],
       gradient: "from-purple-400 to-pink-600",
       features: [
-        "Automatic time tracking",
-        "Custom geofences",
-        "Detailed analytics",
-        "Export reports"
+        "Automatic entry/exit detection",
+        "Visit history tracking",
+        "Time spent analytics",
+        "Local data storage"
+      ]
+    },
+    {
+      title: "Chat App",
+      description: "Real-time one-to-one chat app built with Firebase Firestore. Includes authentication, user search, chat list, and message storage.",
+      tags: ["Kotlin", "Firebase Firestore", "Realtime Chat", "Authentication", "MVVM"],
+      gradient: "from-indigo-400 to-cyan-600",
+      features: [
+        "Email/Password authentication",
+        "One-to-one realtime chat",
+        "User search & chat list",
+        "Message history storage"
       ]
     }
   ];
@@ -59,7 +71,7 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-surface relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-20 right-0 w-80 h-80 bg-gradient-to-bl from-accent/5 to-transparent rounded-full translate-x-40"></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -73,13 +85,13 @@ const Projects = () => {
 
           <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="group hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] border-0 overflow-hidden cursor-pointer animate-fade-in-up"
                 style={{animationDelay: `${0.6 + index * 0.2}s`}}
               >
                 <div className={`h-2 bg-gradient-to-r ${project.gradient} group-hover:h-3 transition-all duration-300`}></div>
-                
+
                 <CardHeader className="pb-4">
                   <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-all duration-300 group-hover:scale-105">
                     {project.title}
@@ -105,7 +117,7 @@ const Projects = () => {
 
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
-                      <Badge 
+                      <Badge
                         key={tagIndex}
                         variant="secondary"
                         className="bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer"
@@ -119,7 +131,7 @@ const Projects = () => {
                   </div>
 
                   <div className="flex gap-3 pt-4">
-                    <Button 
+                    <Button
                       variant="default"
                       className="flex-1 bg-gradient-to-r from-primary to-accent text-primary-foreground hover:scale-105 hover:shadow-lg transition-all duration-300 group/btn relative overflow-hidden"
                     >
@@ -129,7 +141,7 @@ const Projects = () => {
                       </span>
                       <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
                     </Button>
-                    <Button 
+                    <Button
                       variant="outline"
                       className="border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 group/btn"
                     >
@@ -142,7 +154,7 @@ const Projects = () => {
           </div>
 
           <div className="mt-16 text-center animate-scale-in" style={{animationDelay: '1.6s'}}>
-            <Button 
+            <Button
               variant="outline"
               size="lg"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:shadow-lg px-8 py-3 transition-all duration-300 group"

@@ -22,7 +22,7 @@ const About = () => {
             <div className="space-y-6 animate-slide-in-left" style={{animationDelay: '0.6s'}}>
               <div className="space-y-4">
                 <h3 className="text-2xl font-semibold text-foreground hover:text-primary transition-colors duration-300">
-                  Hello! I'm Muhammad Noman Khan Durrani
+                  Hello I'm Muhammad Noman Khan Durrani
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300">
                   I'm a dedicated Android developer with a passion for creating innovative, 
@@ -80,7 +80,15 @@ const About = () => {
                 <div className="w-80 h-80 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-500 cursor-pointer">
                   <div className="w-64 h-64 bg-card rounded-full shadow-xl flex items-center justify-center group-hover:shadow-2xl transition-shadow duration-300">
                     <div className="text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-                      MN
+                      <div className="w-64 h-64 bg-card rounded-full shadow-xl flex items-center justify-center group-hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+                        <Image
+                          src="/images/my_pic.jpg"
+                          alt="Muhammad Noman Khan Durrani"
+                          width={256}
+                          height={256}
+                          className="rounded-full object-cover"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
