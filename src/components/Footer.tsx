@@ -6,17 +6,17 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com/noman-durrani",
+      href: "https://github.com/muhammad-nomankd",
       label: "GitHub"
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/noman-durrani",
+      href: "www.linkedin.com/in/muhammad-noman-durrani-7b772a266",
       label: "LinkedIn"
     },
     {
       icon: Mail,
-      href: "mailto:noman.durrani@example.com",
+      href: "mailto:mnomankd@gmail.com",
       label: "Email"
     }
   ];

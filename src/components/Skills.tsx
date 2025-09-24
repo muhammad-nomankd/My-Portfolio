@@ -4,43 +4,53 @@ import { Badge } from '@/components/ui/badge';
 const Skills = () => {
   const skillCategories = [
     {
-      category: "Languages & Frameworks",
-      skills: ["Kotlin", "Java", "Jetpack Compose", "XML Layouts"],
+      category: "Languages",
+      skills: ["Kotlin", "Python", "SQL", "Java"],
       color: "primary"
     },
     {
-      category: "Architecture & Patterns", 
-      skills: ["MVVM", "MVI", "Clean Architecture", "Repository Pattern"],
+      category: "Frameworks & UI",
+      skills: ["Jetpack Compose", "XML Layouts", "Android SDK", "Material You"],
       color: "accent"
+    },
+    {
+      category: "Architecture & Patterns",
+      skills: ["MVVM", "MVI", "MVP", "Clean Architecture", "Repository Pattern", "Dependency Injection (Hilt, Dagger 2)"],
+      color: "primary"
     },
     {
       category: "Android Components",
-      skills: ["Navigation Component", "WorkManager", "Room Database", "Data Binding"],
-      color: "primary"
+      skills: ["Navigation Component", "WorkManager", "Room Database", "Data Binding", "LiveData", "ViewModels", "DataStore", "SharedPreferences", "ExoPlayer"],
+      color: "accent"
     },
     {
       category: "Networking & APIs",
-      skills: ["Retrofit", "REST APIs", "JSON", "OkHttp"],
-      color: "accent"
+      skills: ["Retrofit", "REST APIs", "JSON", "OkHttp", "Postman"],
+      color: "primary"
     },
     {
       category: "Database & Storage",
-      skills: ["Room Database", "SQLite", "SharedPreferences", "DataStore"],
-      color: "primary"
-    },
-    {
-      category: "Backend & Cloud",
-      skills: ["Firebase", "Cloud Firestore", "Firebase Auth", "Push Notifications"],
+      skills: ["Room Database", "SQLite", "DataStore", "SharedPreferences"],
       color: "accent"
     },
     {
-      category: "Async Programming",
-      skills: ["Coroutines", "Flow", "LiveData", "RxJava"],
+      category: "Backend & Cloud",
+      skills: ["Firebase (Auth, Firestore, Cloud Messaging)", "GitHub REST APIs"],
       color: "primary"
     },
     {
+      category: "Async Programming",
+      skills: ["Coroutines", "StateFlow", "SharedFlow", "LiveData", "RxJava"],
+      color: "accent"
+    },
+    {
       category: "Tools & Version Control",
-      skills: ["Android Studio", "Git", "GitHub", "Gradle"],
+      skills: ["Android Studio", "Git", "GitHub", "Gradle", "Figma", "Zeplin", "Jira", "Slack"],
+      color: "primary"
+    },
+    {
+      category: "Soft Skills",
+      skills: ["Problem Solving", "Collaboration", "Adaptability"],
       color: "accent"
     }
   ];
@@ -49,7 +59,7 @@ const Skills = () => {
     <section id="skills" className="py-20 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-accent/5 to-transparent rounded-full -translate-x-48 translate-y-48"></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -63,8 +73,8 @@ const Skills = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillCategories.map((category, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className={`group hover:shadow-xl transition-all duration-500 hover:scale-105 cursor-pointer animate-fade-in-up ${
                   category.color === 'primary' ? 'border-primary/20 hover:border-primary/40' : 'border-accent/20 hover:border-accent/40'
                 }`}
@@ -78,12 +88,12 @@ const Skills = () => {
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, skillIndex) => (
-                      <Badge 
+                      <Badge
                         key={skillIndex}
                         variant={category.color === 'primary' ? 'default' : 'secondary'}
                         className={`group/badge cursor-pointer transform hover:scale-110 ${
-                          category.color === 'primary' 
-                            ? 'bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground' 
+                          category.color === 'primary'
+                            ? 'bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground'
                             : 'bg-accent/10 text-accent hover:bg-accent hover:text-accent-foreground'
                         } transition-all duration-300`}
                         style={{
@@ -106,7 +116,7 @@ const Skills = () => {
                   Always Learning
                 </h3>
                 <p className="text-lg text-muted-foreground mb-6 group-hover:text-foreground transition-colors duration-300">
-                  I stay updated with the latest Android development trends and continuously 
+                  I stay updated with the latest Android development trends and continuously
                   expand my skill set to deliver cutting-edge mobile solutions.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3">

@@ -43,32 +43,32 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "noman.durrani@example.com",
-      link: "mailto:noman.durrani@example.com"
+      value: "mnomankd@gmail.com",
+      link: "mailto:mnomankd@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+92 XXX XXXXXXX",
-      link: "tel:+92XXXXXXXXX"
+      value: "+92 313 9770020",
+      link: "tel:+923139770020"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Lahore, Pakistan",
+      value: "Nowshera, Pakistan",
       link: "#"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Muhammad Noman Durrani",
-      link: "https://linkedin.com/in/noman-durrani"
+      link: "www.linkedin.com/in/muhammad-noman-durrani-7b772a266"
     },
     {
       icon: Github,
       label: "GitHub",
       value: "@noman-durrani",
-      link: "https://github.com/noman-durrani"
+      link: "https://github.com/muhammad-nomankd"
     }
   ];
 

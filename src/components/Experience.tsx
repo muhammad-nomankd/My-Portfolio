@@ -6,48 +6,48 @@ const Experience = () => {
   const experiences = [
     {
       title: "Android Developer Intern",
-      company: "Tech Solutions Inc.",
+      company: "AppVerse Technologies",
       location: "Remote",
-      period: "Jun 2023 - Aug 2023",
+      period: "July 2025 – Sept 2025",
       type: "Internship",
-      description: "Developed mobile applications using Kotlin and Jetpack Compose. Collaborated with senior developers on feature implementation and code reviews.",
+      description: "Contributed to the design and development of Android applications using Kotlin, Jetpack Compose, and XML. Worked on UI development, state management, data persistence, and API integration to deliver feature-rich apps. Gained hands-on experience in location tracking, real-time data storage, and background services. Developed mini-projects including ChefMate (recipe app), LangPal (language-learning app), and MarkMe (attendance management app). Collaborated closely with the development team, participated in Agile sprints, and followed clean architecture practices.",
       achievements: [
-        "Built 3 mobile app features using Jetpack Compose",
-        "Improved app performance by 25% through optimization",
-        "Participated in Agile development processes",
-        "Wrote comprehensive unit tests"
+        "Developed ChefMate, LangPal, and MarkMe mini-projects",
+        "Hands-on experience with location tracking & background services",
+        "Worked on state management, persistence, and API integration",
+        "Collaborated in Agile sprints with team"
       ],
-      technologies: ["Kotlin", "Jetpack Compose", "MVVM", "Room Database"]
+      technologies: ["Kotlin", "Jetpack Compose", "XML", "Firebase", "MVVM", "Clean Architecture"]
     },
     {
-      title: "Mobile App Development Training",
-      company: "Digital Skills Academy",
-      location: "Lahore, Pakistan",
-      period: "Jan 2023 - May 2023",
-      type: "Training",
-      description: "Intensive 5-month training program covering modern Android development practices, clean architecture, and industry best practices.",
+      title: "Android Developer Intern",
+      company: "Khyber Coded",
+      location: "Remote",
+      period: "Nov 2024 – Jan 2025",
+      type: "Internship",
+      description: "Collaborated with the in-house development team to build native Android apps using Kotlin and Jetpack Compose. Developed real-time features with Firebase Authentication, Cloud Firestore, and FCM for notifications. Worked with MVVM architecture, Hilt for DI, Coroutines, State Management, Navigation component, and caching with Room, DataStore, and SharedPreferences.",
       achievements: [
-        "Completed 15+ hands-on projects",
-        "Mastered Kotlin and Jetpack Compose",
-        "Learned clean architecture principles",
-        "Earned certification in Android development"
+        "Built real-time features with Firebase (Auth, Firestore, Cloud Messaging)",
+        "Applied MVVM, Hilt DI, and Coroutines",
+        "Implemented offline caching with Room and DataStore",
+        "Worked on LiveData, Navigation component, and state management"
       ],
-      technologies: ["Kotlin", "Java", "Firebase", "REST APIs", "Git"]
+      technologies: ["Kotlin", "Jetpack Compose", "Firebase", "Room", "DataStore", "Hilt", "Coroutines", "MVVM"]
     },
     {
       title: "Freelance Android Developer",
       company: "Independent",
-      location: "Remote", 
-      period: "Sep 2023 - Present",
+      location: "Remote",
+      period: "Sep 2023 – Present",
       type: "Freelance",
-      description: "Working on various client projects, delivering custom Android applications with focus on user experience and modern design principles.",
+      description: "Delivered custom Android apps focusing on user experience, performance, and clean architecture. Specialized in Kotlin and Jetpack Compose with Firebase and REST APIs for backend integration. Worked on scalable app architectures, Material You design, and collaborated with clients to deliver tailored solutions.",
       achievements: [
-        "Delivered 8+ successful projects",
-        "Maintained 5-star client rating",
-        "Specialized in Material You design",
-        "Built scalable app architectures"
+        "Delivered multiple successful projects",
+        "Specialized in modern UI (Material You + Jetpack Compose)",
+        "Maintained clean and scalable app architectures",
+        "Kept consistent client satisfaction with 5⭐ ratings"
       ],
-      technologies: ["Kotlin", "Jetpack Compose", "Firebase", "Clean Architecture"]
+      technologies: ["Kotlin", "Jetpack Compose", "Firebase", "REST APIs", "Clean Architecture"]
     }
   ];
 
@@ -75,7 +75,7 @@ const Experience = () => {
 
           <div className="space-y-8">
             {experiences.map((experience, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="group hover:shadow-lg transition-all duration-300 border-primary/10 hover:border-primary/30"
               >
@@ -90,7 +90,7 @@ const Experience = () => {
                           {experience.type}
                         </Badge>
                       </div>
-                      
+
                       <div className="flex items-center gap-4 text-muted-foreground">
                         <div className="flex items-center gap-2">
                           <Briefcase className="w-4 h-4" />
@@ -128,7 +128,7 @@ const Experience = () => {
                   <div className="mt-6 pt-6 border-t border-border">
                     <div className="flex flex-wrap gap-2">
                       {experience.technologies.map((tech, techIndex) => (
-                        <Badge 
+                        <Badge
                           key={techIndex}
                           variant="secondary"
                           className="bg-primary/5 text-primary hover:bg-primary/10 transition-colors"
