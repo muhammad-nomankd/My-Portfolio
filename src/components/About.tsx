@@ -79,16 +79,12 @@ const About = () => {
               <div className="relative group">
                 <div className="w-80 h-80 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-500 cursor-pointer">
                   <div className="w-64 h-64 bg-card rounded-full shadow-xl flex items-center justify-center group-hover:shadow-2xl transition-shadow duration-300">
-                    <div className="text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-                      <div className="w-64 h-64 bg-card rounded-full shadow-xl flex items-center justify-center group-hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
-                        <Image
-                          src="/images/my_pic.jpg"
-                          alt="Muhammad Noman Khan Durrani"
-                          width={256}
-                          height={256}
-                          className="rounded-full object-cover"
-                        />
-                      </div>
+                    <div className="w-64 h-64 bg-card rounded-full shadow-xl flex items-center justify-center group-hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+                      <img
+                        src="/images/profile.jpg"
+                        alt="Muhammad Noman Khan Durrani"
+                        className="w-full h-full object-cover rounded-full"
+                      />
                     </div>
                   </div>
                 </div>
