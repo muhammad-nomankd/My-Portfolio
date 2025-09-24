@@ -81,7 +81,7 @@ const About = () => {
                   <div className="w-64 h-64 bg-card rounded-full shadow-xl flex items-center justify-center group-hover:shadow-2xl transition-shadow duration-300">
                     <div className="w-64 h-64 bg-card rounded-full shadow-xl flex items-center justify-center group-hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
                       <img
-                        src="/images/profile.jpg"
+                        src="/images/my_pic.jpg"
                         alt="Muhammad Noman Khan Durrani"
                         className="w-full h-full object-cover rounded-full"
                       />
