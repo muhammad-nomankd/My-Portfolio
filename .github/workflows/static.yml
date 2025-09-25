@@ -36,7 +36,7 @@ jobs:
       - name: Upload production-ready build files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist   # 👉 change this if your build folder is different
+          path: ./build   # 👉 change this if your build folder is different
           
   deploy:
     environment:
