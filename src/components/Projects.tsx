@@ -6,51 +6,51 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "MarkMe App",
-      description: "Attendance tracking system with separate UI for admin and users. Supports QR scanning, manual entry, and geofencing for location-based attendance.",
-      tags: ["Kotlin", "Room", "Clean Architecture", "QR Scanner", "Geofencing"],
-      gradient: "from-orange-400 to-red-600",
-      features: [
-        "Admin & User UI separation",
-        "QR code attendance",
-        "Location-based verification",
-        "Attendance reports"
-      ]
-    },
-    {
       title: "TaskAlert App",
-      description: "Task scheduling app built with Kotlin and Jetpack Compose. Integrated Firebase authentication, Google sign-in, and weather API for condition-based alerts. Users can add, update, and delete tasks with real-time sync.",
-      tags: ["Kotlin", "Jetpack Compose", "Firebase", "Google Sign-In", "Weather API"],
+      description: "A comprehensive task scheduling application with Firebase integration and weather-based alerts. Features include smart notifications, task prioritization, and weather condition monitoring for outdoor tasks.",
+      tags: ["Kotlin", "Jetpack Compose", "Firebase", "Weather API", "Room Database"],
       gradient: "from-blue-400 to-purple-600",
       features: [
-        "Email & Google authentication",
-        "Save, update, delete tasks",
-        "Weather-based smart alerts",
-        "Modularized architecture"
+        "Real-time weather integration",
+        "Smart task scheduling",
+        "Push notifications",
+        "Offline support"
       ]
     },
     {
-      title: "Quote App",
-      description: "A simple quote application where users can view motivational and inspirational quotes. Built with Jetpack Compose and clean architecture principles.",
-      tags: ["Kotlin", "Jetpack Compose", "MVVM"],
-      gradient: "from-teal-400 to-indigo-600",
+      title: "SalahSync App",
+      description: "Modern masjid management system with prayer time calculations, community notifications, and administrative tools. Built with Material You design principles.",
+      tags: ["Kotlin", "MVVM", "Firebase", "Prayer Times API", "Material You"],
+      gradient: "from-green-400 to-emerald-600",
       features: [
-        "Display random quotes",
-        "Clean architecture",
-        "Simple, elegant UI"
+        "Accurate prayer times",
+        "Community announcements",
+        "Event management",
+        "Qibla direction"
       ]
     },
     {
-      title: "ChefMate App",
-      description: "Recipe management app built with Kotlin and Jetpack Compose. Supports adding, searching, and favoriting recipes with clean architecture and local storage.",
-      tags: ["Kotlin", "Jetpack Compose", "Room Database", "Hilt", "MVVM", "Clean Architecture"],
-      gradient: "from-pink-400 to-rose-600",
+      title: "MarkMe App",
+      description: "Dual-interface attendance tracking system with separate admin and user portals. Features QR code scanning, geofencing, and comprehensive reporting.",
+      tags: ["Kotlin", "Clean Architecture", "Room", "QR Scanner", "Geofencing"],
+      gradient: "from-orange-400 to-red-600",
       features: [
-        "Add, search, and favorite recipes",
-        "Local storage with Room Database",
-        "Dependency injection with Hilt",
-        "Bottom navigation with Compose",
-        "MVVM + Repository pattern"
+        "QR code attendance",
+        "Admin dashboard",
+        "Attendance reports",
+        "Location verification"
+      ]
+    },
+    {
+      title: "Location Geofencing App",
+      description: "Advanced time tracking application using geofences to monitor time spent in specific locations. Includes detailed analytics and reporting features.",
+      tags: ["Kotlin", "Geofencing", "Room Database", "Coroutines", "Analytics"],
+      gradient: "from-purple-400 to-pink-600",
+      features: [
+        "Automatic time tracking",
+        "Custom geofences",
+        "Detailed analytics",
+        "Export reports"
       ]
     }
   ];
