@@ -25,10 +25,7 @@ const About = () => {
                   Hello I'm Muhammad Noman Khan Durrani
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300">
-                  I'm a dedicated Android developer with a passion for creating innovative, 
-                  user-friendly mobile applications. My journey in software development has 
-                  been driven by curiosity and a constant desire to learn and implement 
-                  cutting-edge technologies.
+                  Android developer with 3+ years experience in Native Android Development using Kotlin, Jetpack Compose and Android SDK. Built and launched user-friendly, real life applications such as Task Alert and MarkMe. Follows MVVM, MVI and Clean Architecture Principles, Skilled in Firebase Authentication (Auth, Firestore), REST APIs, Room Database, Navigation Component, WorkManager, Coroutines and Passionate about UI/UX, Agile Development.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300">
                   I specialize in modern Android development using <span className="text-accent font-semibold hover:text-primary transition-colors duration-300 cursor-default">Kotlin</span> and <span className="text-accent font-semibold hover:text-primary transition-colors duration-300 cursor-default">Jetpack Compose</span>, 

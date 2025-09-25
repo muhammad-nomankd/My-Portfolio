@@ -17,7 +17,7 @@ const Experience = () => {
         "Worked on state management, persistence, and API integration",
         "Collaborated in Agile sprints with team"
       ],
-      technologies: ["Kotlin", "Jetpack Compose", "XML", "Firebase", "MVVM", "Clean Architecture"]
+      technologies: ["Kotlin", "Jetpack Compose","Coroutines","Kotlin Custom Exceptional handling", "XML", "Firebase", "MVVM/MVI", "Clean Architecture","Repository Pattern"]
     },
     {
       title: "Android Developer Intern",
