@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
     },
     {
       label: "GitHub",
-      value: "@noman-durrani",
+      value: "@muhammad-nomankd",
       link: "https://github.com/muhammad-nomankd",
       copyable: false,
     },
