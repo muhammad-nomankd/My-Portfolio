@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: "MarkMe App",
       description: "Attendance tracking system with separate UI for admin and users. Supports QR scanning, manual entry, and geofencing for location-based attendance.",
-      tags: ["Kotlin", "Room", "Clean Architecture", "QR Scanner", "Geofencing"],
+      tags: ["Kotlin", "Room","QR Scanner","MVVM","Coroutines","Hilt","Material 3"],
       gradient: "from-orange-400 to-red-600",
       features: [
         "Admin & User UI separation",

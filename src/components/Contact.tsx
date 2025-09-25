@@ -14,6 +14,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
@@ -28,7 +29,7 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Simulate form submission (replace with EmailJS/Formspree for real sending)
     setTimeout(() => {
       toast({
         title: "Message Sent!",
@@ -56,7 +57,7 @@ const Contact = () => {
       icon: MapPin,
       label: "Location",
       value: "Nowshera, Pakistan",
-      link: "#"
+      link: "https://www.google.com/maps/search/?api=1&query=Nowshera+Pakistan"
     },
     {
       icon: Linkedin,
@@ -76,36 +77,43 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-surface relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tl from-primary/5 to-transparent rounded-full translate-x-36 translate-y-36"></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in-up">
               Get In Touch
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+            <p
+              className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up"
+              style={{ animationDelay: '0.3s' }}
+            >
               Let's discuss your next Android project or collaboration opportunity
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div className="space-y-8 animate-slide-in-left" style={{animationDelay: '0.6s'}}>
+            <div className="space-y-8 animate-slide-in-left" style={{ animationDelay: '0.6s' }}>
               <div>
                 <h3 className="text-2xl font-semibold text-foreground mb-6 hover:text-primary transition-colors duration-300">
                   Let's Connect
                 </h3>
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed hover:text-foreground transition-colors duration-300">
-                  I'm always open to discussing new opportunities, interesting projects, 
+                  I'm always open to discussing new opportunities, interesting projects,
                   or just having a conversation about Android development. Feel free to reach out!
                 </p>
               </div>
 
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="border-primary/10 hover:border-primary/30 hover:shadow-lg hover:scale-105 transition-all duration-300 group/card animate-fade-in-up" style={{animationDelay: `${0.9 + index * 0.1}s`}}>
+                  <Card
+                    key={index}
+                    className="border-primary/10 hover:border-primary/30 hover:shadow-lg hover:scale-105 transition-all duration-300 group/card animate-fade-in-up"
+                    style={{ animationDelay: `${0.9 + index * 0.1}s` }}
+                  >
                     <CardContent className="p-4">
-                      <a 
+                      <a
                         href={info.link}
                         className="flex items-center space-x-4 group"
                         target={info.link.startsWith('http') ? '_blank' : '_self'}
@@ -115,7 +123,9 @@ const Contact = () => {
                           <info.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                         </div>
                         <div>
-                          <p className="font-medium text-foreground group-hover:text-primary transition-colors duration-300">{info.label}</p>
+                          <p className="font-medium text-foreground group-hover:text-primary transition-colors duration-300">
+                            {info.label}
+                          </p>
                           <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                             {info.value}
                           </p>
@@ -128,9 +138,11 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <Card className="border-primary/20 hover:shadow-lg hover:border-primary/30 transition-all duration-300 animate-slide-in-right" style={{animationDelay: '1.2s'}}>
+            <Card className="border-primary/20 hover:shadow-lg hover:border-primary/30 transition-all duration-300 animate-slide-in-right" style={{ animationDelay: '1.2s' }}>
               <CardHeader>
-                <CardTitle className="text-2xl text-foreground hover:text-primary transition-colors duration-300">Send a Message</CardTitle>
+                <CardTitle className="text-2xl text-foreground hover:text-primary transition-colors duration-300">
+                  Send a Message
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
