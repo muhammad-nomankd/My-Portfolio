@@ -64,10 +64,11 @@ const Hero = () => {
         </div>
         
         {/* Enhanced scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer group" onClick={scrollToProjects}>
-          <div className="flex flex-col items-center space-y-2">
-            <ArrowDown className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
-            <div className="w-0.5 h-8 bg-gradient-to-b from-muted-foreground to-transparent"></div>
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer group" onClick={scrollToProjects}>
+          <div className="flex flex-col items-center space-y-1">
+            <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors duration-300 mb-1">Scroll</span>
+            <ArrowDown className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+            <div className="w-0.5 h-6 bg-gradient-to-b from-muted-foreground to-transparent"></div>
           </div>
         </div>
       </div>
