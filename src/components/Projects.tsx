@@ -2,57 +2,58 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
-const projects = [
-  {
-    title: "MarkMe App",
-    description: "Attendance tracking system with separate UI for admin and users. Supports QR scanning, manual entry, and geofencing for location-based attendance.",
-    tags: ["Kotlin", "Room", "Clean Architecture", "QR Scanner", "Geofencing"],
-    gradient: "from-orange-400 to-red-600",
-    features: [
-      "Admin & User UI separation",
-      "QR code attendance",
-      "Location-based verification",
-      "Attendance reports"
-    ]
-  },
-  {
-    title: "TaskAlert App",
-    description: "Task scheduling app built with Kotlin and Jetpack Compose. Integrated Firebase authentication, Google sign-in, and weather API for condition-based alerts. Users can add, update, and delete tasks with real-time sync.",
-    tags: ["Kotlin", "Jetpack Compose", "Firebase", "Google Sign-In", "Weather API"],
-    gradient: "from-blue-400 to-purple-600",
-    features: [
-      "Email & Google authentication",
-      "Save, update, delete tasks",
-      "Weather-based smart alerts",
-      "Modularized architecture"
-    ]
-  },
-  {
-    title: "ChefMate App",
-    description: "Recipe management app built with Kotlin and Jetpack Compose. Allows users to add, search, and favorite recipes with modern UI, local storage, and clean architecture.",
-    tags: ["Kotlin", "Jetpack Compose", "Room", "Hilt", "MVVM"],
-    gradient: "from-pink-400 to-rose-600",
-    features: [
-      "Add, search, and filter recipes",
-      "Favorite recipe management",
-      "Room database for local storage",
-      "Hilt dependency injection",
-      "Bottom navigation & modern Compose UI"
-    ]
-  },
-  {
-    title: "Quote App",
-    description: "A simple quote application where users can view motivational and inspirational quotes. Built with Jetpack Compose and clean architecture principles.",
-    tags: ["Kotlin", "Jetpack Compose", "MVVM"],
-    gradient: "from-teal-400 to-indigo-600",
-    features: [
-      "Display random quotes",
-      "Clean architecture",
-      "Simple, elegant UI"
-    ]
-  }
-];
 
+const Projects = () => {
+  const projects = [
+    {
+      title: "MarkMe App",
+      description: "Attendance tracking system with separate UI for admin and users. Supports QR scanning, manual entry, and geofencing for location-based attendance.",
+      tags: ["Kotlin", "Room", "Clean Architecture", "QR Scanner", "Geofencing"],
+      gradient: "from-orange-400 to-red-600",
+      features: [
+        "Admin & User UI separation",
+        "QR code attendance",
+        "Location-based verification",
+        "Attendance reports"
+      ]
+    },
+    {
+      title: "TaskAlert App",
+      description: "Task scheduling app built with Kotlin and Jetpack Compose. Integrated Firebase authentication, Google sign-in, and weather API for condition-based alerts. Users can add, update, and delete tasks with real-time sync.",
+      tags: ["Kotlin", "Jetpack Compose", "Firebase", "Google Sign-In", "Weather API"],
+      gradient: "from-blue-400 to-purple-600",
+      features: [
+        "Email & Google authentication",
+        "Save, update, delete tasks",
+        "Weather-based smart alerts",
+        "Modularized architecture"
+      ]
+    },
+    {
+      title: "Quote App",
+      description: "A simple quote application where users can view motivational and inspirational quotes. Built with Jetpack Compose and clean architecture principles.",
+      tags: ["Kotlin", "Jetpack Compose", "MVVM"],
+      gradient: "from-teal-400 to-indigo-600",
+      features: [
+        "Display random quotes",
+        "Clean architecture",
+        "Simple, elegant UI"
+      ]
+    },
+    {
+      title: "ChefMate App",
+      description: "Recipe management app built with Kotlin and Jetpack Compose. Supports adding, searching, and favoriting recipes with clean architecture and local storage.",
+      tags: ["Kotlin", "Jetpack Compose", "Room Database", "Hilt", "MVVM", "Clean Architecture"],
+      gradient: "from-pink-400 to-rose-600",
+      features: [
+        "Add, search, and favorite recipes",
+        "Local storage with Room Database",
+        "Dependency injection with Hilt",
+        "Bottom navigation with Compose",
+        "MVVM + Repository pattern"
+      ]
+    }
+  ];
 
   return (
     <section id="projects" className="py-20 bg-surface relative overflow-hidden">
