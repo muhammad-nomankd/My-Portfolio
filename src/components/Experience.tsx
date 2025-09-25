@@ -33,21 +33,6 @@ const Experience = () => {
         "Worked on LiveData, Navigation component, and state management"
       ],
       technologies: ["Kotlin", "Jetpack Compose", "Firebase", "Room", "DataStore", "Hilt", "Coroutines", "MVVM"]
-    },
-    {
-      title: "Freelance Android Developer",
-      company: "Independent",
-      location: "Remote",
-      period: "Sep 2023 – Present",
-      type: "Freelance",
-      description: "Delivered custom Android apps focusing on user experience, performance, and clean architecture. Specialized in Kotlin and Jetpack Compose with Firebase and REST APIs for backend integration. Worked on scalable app architectures, Material You design, and collaborated with clients to deliver tailored solutions.",
-      achievements: [
-        "Delivered multiple successful projects",
-        "Specialized in modern UI (Material You + Jetpack Compose)",
-        "Maintained clean and scalable app architectures",
-        "Kept consistent client satisfaction with 5⭐ ratings"
-      ],
-      technologies: ["Kotlin", "Jetpack Compose", "Firebase", "REST APIs", "Clean Architecture"]
     }
   ];
 

@@ -62,7 +62,7 @@ const Contact = () => {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Muhammad Noman Durrani",
-      link: "www.linkedin.com/in/muhammad-noman-durrani-7b772a266"
+      link: "https://www.linkedin.com/in/muhammad-noman-durrani-7b772a266/"
     },
     {
       icon: Github,
