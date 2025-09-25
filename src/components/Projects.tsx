@@ -6,30 +6,6 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "TaskAlert App",
-      description: "Task scheduling app built with Kotlin and Jetpack Compose. Integrated Firebase authentication, Google sign-in, and weather API for condition-based alerts. Users can add, update, and delete tasks with real-time sync.",
-      tags: ["Kotlin", "Jetpack Compose", "Firebase", "Google Sign-In", "Weather API"],
-      gradient: "from-blue-400 to-purple-600",
-      features: [
-        "Email & Google authentication",
-        "Save, update, delete tasks",
-        "Weather-based smart alerts",
-        "Modularized architecture"
-      ]
-    },
-    {
-      title: "SalahSync App",
-      description: "Masjid management app with Firestore backend. Allows admin to manage announcements, prayer times, and members. Integrated authentication state management with StateFlow.",
-      tags: ["Kotlin", "Firestore", "StateFlow", "FirebaseAuth", "Jetpack Compose"],
-      gradient: "from-green-400 to-emerald-600",
-      features: [
-        "Realtime announcements",
-        "Prayer time management",
-        "Member handling",
-        "Firestore authentication"
-      ]
-    },
-    {
       title: "MarkMe App",
       description: "Attendance tracking system with separate UI for admin and users. Supports QR scanning, manual entry, and geofencing for location-based attendance.",
       tags: ["Kotlin", "Room", "Clean Architecture", "QR Scanner", "Geofencing"],
@@ -42,27 +18,26 @@ const Projects = () => {
       ]
     },
     {
-      title: "Location Geofencing App",
-      description: "App to monitor entry/exit of geofences, log time spent, and maintain visit history. Uses Room database and Coroutines for async operations.",
-      tags: ["Kotlin", "Geofencing", "Room Database", "Coroutines", "Jetpack Compose"],
-      gradient: "from-purple-400 to-pink-600",
+      title: "TaskAlert App",
+      description: "Task scheduling app built with Kotlin and Jetpack Compose. Integrated Firebase authentication, Google sign-in, and weather API for condition-based alerts. Users can add, update, and delete tasks with real-time sync.",
+      tags: ["Kotlin", "Jetpack Compose", "Firebase", "Google Sign-In", "Weather API"],
+      gradient: "from-blue-400 to-purple-600",
       features: [
-        "Automatic entry/exit detection",
-        "Visit history tracking",
-        "Time spent analytics",
-        "Local data storage"
+        "Email & Google authentication",
+        "Save, update, delete tasks",
+        "Weather-based smart alerts",
+        "Modularized architecture"
       ]
     },
     {
-      title: "Chat App",
-      description: "Real-time one-to-one chat app built with Firebase Firestore. Includes authentication, user search, chat list, and message storage.",
-      tags: ["Kotlin", "Firebase Firestore", "Realtime Chat", "Authentication", "MVVM"],
-      gradient: "from-indigo-400 to-cyan-600",
+      title: "Quote App",
+      description: "A simple quote application where users can view motivational and inspirational quotes. Built with Jetpack Compose and clean architecture principles.",
+      tags: ["Kotlin", "Jetpack Compose", "MVVM"],
+      gradient: "from-teal-400 to-indigo-600",
       features: [
-        "Email/Password authentication",
-        "One-to-one realtime chat",
-        "User search & chat list",
-        "Message history storage"
+        "Display random quotes",
+        "Clean architecture",
+        "Simple, elegant UI"
       ]
     }
   ];
