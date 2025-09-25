@@ -15,7 +15,8 @@ const Projects = () => {
         "QR code attendance",
         "Location-based verification",
         "Attendance reports"
-      ]
+      ],
+      link: "https://github.com/muhammad-nomankd/MarkMe"
     },
     {
       title: "TaskAlert App",
@@ -27,7 +28,8 @@ const Projects = () => {
         "Save, update, delete tasks",
         "Weather-based smart alerts",
         "Modularized architecture"
-      ]
+      ],
+      link: "https://github.com/muhammad-nomankd/TaskAlert"
     },
     {
       title: "Quote App",
@@ -38,7 +40,8 @@ const Projects = () => {
         "Display random quotes",
         "Clean architecture",
         "Simple, elegant UI"
-      ]
+      ],
+      link: "https://github.com/muhammad-nomankd/Quote-App"
     },
     {
       title: "ChefMate App",
@@ -51,7 +54,8 @@ const Projects = () => {
         "Dependency injection with Hilt",
         "Bottom navigation with Compose",
         "MVVM + Repository pattern"
-      ]
+      ],
+      link: "https://github.com/muhammad-nomankd/ChefMate"
     }
   ];
 
@@ -120,20 +124,26 @@ const Projects = () => {
 
                   <div className="flex gap-3 pt-4">
                     <Button
+                      asChild
                       variant="default"
                       className="flex-1 bg-gradient-to-r from-primary to-accent text-primary-foreground hover:scale-105 hover:shadow-lg transition-all duration-300 group/btn relative overflow-hidden"
                     >
-                      <span className="relative z-10 flex items-center">
-                        <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:rotate-45 transition-transform duration-300" />
-                        View Project
-                      </span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        <span className="relative z-10 flex items-center">
+                          <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:rotate-45 transition-transform duration-300" />
+                          View Project
+                        </span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                      </a>
                     </Button>
                     <Button
+                      asChild
                       variant="outline"
                       className="border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 group/btn"
                     >
-                      <Github className="w-4 h-4 group-hover/btn:scale-125 transition-transform duration-300" />
+                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 group-hover/btn:scale-125 transition-transform duration-300" />
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
@@ -143,12 +153,15 @@ const Projects = () => {
 
           <div className="mt-16 text-center animate-scale-in" style={{animationDelay: '1.6s'}}>
             <Button
+              asChild
               variant="outline"
               size="lg"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:shadow-lg px-8 py-3 transition-all duration-300 group"
             >
-              <Github className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-              View All Projects on GitHub
+              <a href="https://github.com/muhammad-nomankd?tab=repositories" target="_blank" rel="noopener noreferrer">
+                <Github className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+                View All Projects on GitHub
+              </a>
             </Button>
           </div>
         </div>
