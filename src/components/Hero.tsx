@@ -39,7 +39,7 @@ const Hero = () => {
             </div>
 
             <p
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in-up"
+              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in-up mb-8"
               style={{animationDelay: '0.9s'}}
             >
               Building modern, scalable Android apps with
@@ -47,6 +47,14 @@ const Hero = () => {
               &
               <span className="text-accent font-semibold transition-colors duration-300 hover:text-primary"> Jetpack Compose</span>
             </p>
+
+            {/* Animated dropdown icon */}
+            <div 
+              className="flex justify-center mb-8 animate-fade-in-up"
+              style={{animationDelay: '1.1s'}}
+            >
+              <ArrowDown className="w-6 h-6 text-accent animate-bounce cursor-pointer hover:text-primary transition-colors duration-300" />
+            </div>
           </div>
 
           {/* CTA buttons */}
@@ -70,17 +78,6 @@ const Hero = () => {
               <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
               Download CV
             </Button>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div
-          className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer group"
-          onClick={scrollToProjects}
-        >
-          <div className="flex flex-col items-center space-y-1">
-            <ArrowDown className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-300 stroke-2" />
-            <div className="w-0.5 h-6 bg-gradient-to-b from-muted-foreground to-transparent"></div>
           </div>
         </div>
       </div>
