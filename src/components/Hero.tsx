@@ -39,7 +39,7 @@ const Hero = () => {
             </div>
 
             <p
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in-up"
+              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in-up mb-12"
               style={{animationDelay: '0.9s'}}
             >
               Building modern, scalable Android apps with
