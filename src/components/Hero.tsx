@@ -39,7 +39,7 @@ const Hero = () => {
             </div>
 
             <p
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in-up mb-12"
+              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in-up mb-8"
               style={{animationDelay: '0.9s'}}
             >
               Building modern, scalable Android apps with
@@ -47,6 +47,14 @@ const Hero = () => {
               &
               <span className="text-accent font-semibold transition-colors duration-300 hover:text-primary"> Jetpack Compose</span>
             </p>
+
+            {/* Animated dropdown icon */}
+            <div 
+              className="flex justify-center mb-8 animate-fade-in-up"
+              style={{animationDelay: '1.1s'}}
+            >
+              <ArrowDown className="w-6 h-6 text-accent animate-bounce cursor-pointer hover:text-primary transition-colors duration-300" />
+            </div>
           </div>
 
           {/* CTA buttons */}
